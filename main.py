@@ -1,4 +1,5 @@
 import unittest
+import os
 
 import allure
 from selenium import webdriver
@@ -17,8 +18,9 @@ class DemoAllure(unittest.TestCase):
 
     @allure.step("Launch site")
     def launch_site(self):
+        host = print(os.environ['SELENOID_HOST'])
         self.driver = webdriver.Remote(
-            command_executor='http://selenoid:4444/wd/hub',
+            command_executor=f'http://{host}:4444/wd/hub',
             desired_capabilities=DesiredCapabilities.CHROME)
         self.driver.get("http://qaboy.com/")
 
