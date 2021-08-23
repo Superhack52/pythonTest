@@ -1,5 +1,6 @@
 import unittest
 import os
+import time
 
 import allure
 from selenium import webdriver
@@ -19,6 +20,7 @@ class DemoAllure(unittest.TestCase):
 
     @allure.step("Always true")
     def launch_always_true(self):
+        time.sleep(20)
         assert True == True
     # @allure.step("Launch site")
     # def launch_site(self):
