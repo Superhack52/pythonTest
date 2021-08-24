@@ -8,7 +8,7 @@ cat <<EOF
 	"properties": {
     	"property": [{
             	"name": "env.container_name",
-            	"value": ${CONTAINER_NAME}
+            	"value": "${CONTAINER_NAME}"
      	   }
     	]
 	}
