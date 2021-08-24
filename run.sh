@@ -17,7 +17,7 @@ EOF
 }
 
 echo Test begin
-pytest ./main.py --alluredir=./allure_results
+pytest ./main.py --alluredir=./allure_result
 echo Test ended
 
 curl -v --header "Authorization: Bearer ${TOKEN}" --request POST "http://teamcity-server-instance:8111/app/rest/buildQueue/" --data "$(generate_json)" --header "Content-Type: application/json"
