@@ -1,8 +1,9 @@
 #!/bin/sh
 
-function get_image_tag {
-	echo $( docker ps -a --format "{{.Image}}"  --filter="name=$CONTAINER_NAME")
-}
+# CONTAINER_NAME=dockertestrun_teamcity-agent-instance_1
+# function get_image_tag {
+# 	echo $( docker ps -a --format "{{.Image}}"  --filter="name=$CONTAINER_NAME")
+# }
 
 function generate_json {
 cat <<EOF
@@ -14,17 +15,14 @@ cat <<EOF
     	"property": [{
             	"name": "env.container_name",
             	"value": "${CONTAINER_NAME}"
-     	   },
-			{
-				"name": "env.image_tag",
-				"value": "$(get_image_tag)"
-			}
+     	   }
     	]
 	}
 }
 EOF
 }
 
+# echo $(generate_json)
 echo Test begin
 pytest ./main.py --alluredir=./allure_result
 echo Test ended
