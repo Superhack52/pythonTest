@@ -5,6 +5,9 @@ cat <<EOF
 	"buildType": {
     	"id": "PythonTest_GetResult"
 	},
+	"comment": {
+    	"text": "Build for testing REST API"
+	},
 	"properties": {
     	"property": [{
             	"name": "env.container_name",
