@@ -1,6 +1,6 @@
 FROM python:3.9.6-alpine3.14
 
-ENV TOKEN=$auth_token
+# ENV TOKEN=$auth_token
 
 RUN apk --no-cache add curl
 RUN apk add --no-cache bash
