@@ -3,7 +3,14 @@ function generate_json {
 cat <<EOF
 {
 	"buildType": {
-    	"id": "PythonTest_GetResult"
+    	"id": "PythonTest_GetResultContainer"
+	},
+	"properties": {
+    	"property": [{
+            	"name": "env.container_name",
+            	"value": "${CONTAINER_NAME}"
+     	   }
+    	]
 	}
 }
 EOF
