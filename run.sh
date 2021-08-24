@@ -1,7 +1,7 @@
 #!/bin/sh
 
 function get_image_tag {
-	echo $( docker ps -a --format "{{.Image}}"  --filter="name=test-development-56")
+	echo $( docker ps -a --format "{{.Image}}"  --filter="${CONTAINER_NAME}")
 }
 
 function generate_json {
