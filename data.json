@@ -1,5 +1,1 @@
-{
-	"buildType": {
-    	"id": "PythonTest_GetResult"
-	}
-}
+{ "buildType": { "id": "PythonTest_GetResult" }, "properties": { "property": [{ "name": "env.container_name", "value": ${CONTAINER_NAME} } ]}}
