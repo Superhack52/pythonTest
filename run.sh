@@ -1,11 +1,11 @@
 #!/bin/sh
 function generate_json {
 cat <<EOF
-{
+"{
 	"buildType": {
     	"id": "PythonTest_GetResult"
 	}
-}
+}"
 EOF
 }
 
